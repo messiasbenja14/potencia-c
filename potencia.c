@@ -9,11 +9,8 @@ int main(int argc, char const *argv[]) {
         num1 = atof(argv[1]);
         num2 = atof(argv[2]);
     } else {
-        printf("Digite a base: ");
-        if (scanf("%lf", &num1) != 1) return 1;
-        
-        printf("Digite o expoente: ");
-        if (scanf("%lf", &num2) != 1) return 1;
+        num1 = 5;
+        num2 = 2;
     }
 
     double res = potencia(num1, num2);
@@ -26,9 +23,6 @@ int main(int argc, char const *argv[]) {
         fprintf(arquivo, "resultado: %f\n", res);
         fprintf(arquivo, "\nFeito por benjamim messias\n");
         fclose(arquivo);
-    } else {
-        printf("Erro ao criar o arquivo de saida.\n");
-        return 1;
     }
 
     return 0;
