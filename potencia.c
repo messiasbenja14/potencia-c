@@ -28,6 +28,7 @@ int main(int argc, char const *argv[]) {
         fclose(arquivo);
     } else {
         printf("Erro ao criar o arquivo de saida.\n");
+        return 1;
     }
 
     return 0;
