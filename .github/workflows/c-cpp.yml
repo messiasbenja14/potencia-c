@@ -13,16 +13,17 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Compilar o programa principal
-      run: gcc -o potencia potencia.c
+    - name: Compilar potencia
+      run: gcc potencia.c -o potencia
 
-    - name: Executar o programa principal com argumentos
+    - name: Executar potencia com argumentos
       run: ./potencia 5 2
 
-    - name: Mostrar o conteúdo do arquivo criado
+    - name: Mostrar o conteudo do arquivo criado
       run: cat potencia.txt
 
-    - name: Compilar e executar os testes
-      run: |
-        gcc -o testes testes.c
-        ./testes
+    - name: Compilar testes
+      run: gcc testes.c -o testes
+
+    - name: Executar testes
+      run: ./testes
